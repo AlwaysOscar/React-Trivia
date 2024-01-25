@@ -1,9 +1,20 @@
 .mainContainer {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     position: relative;
-    display: grid;
+    flex-direction: column;
+    text-align: center;
     z-index: 2;
+}
+
+.mainContainer h1 {
+    font-size: 64px;
+    font-weight: 400;
+}
+
+.mainContainer p {
+    font-size: 36px;
+    font-weight: 400;
 }
 
 .navbar {
@@ -11,7 +22,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;    
+    justify-content: space-between;
     width: 100%;
 }
 
@@ -23,6 +34,7 @@
 .homeImg {
     display: block;
     width: 5%;
+    margin-left: 10px;
 }
 
 .scoreBoard {
@@ -32,6 +44,7 @@
     padding: 10px 10px;
     margin-top: 10px;
     margin-bottom: 10px;
+    margin-right: 10px;
 }
 
 .scoreBoard h1 {
@@ -41,30 +54,105 @@
     font-weight: 900;
 }
 
-.footer {
-    color: var(--color-text);
-    margin-top: 120px;
-    background-color: var(--color-borders);
-    display: flex;
+.body {
     width: 100%;
-    padding: 2% 2% 2% 2%;
-    justify-content: space-between;    
-    position: fixed; /* Set position to fixed */
-    bottom: 0;
+    position: relative;
+    display: flex;
+    flex-direction: row;
 }
 
-.arrowImg{
+.choice {
+    width: 50%;
+    position: relative;
+    display: grid;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid #197C82;
+    margin-left: 10px;
+    margin-right: 10px;
+    place-items: center;
+}
+
+.choice h1 {
+    color: #EFEFEF;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.teamLogoImg {
+    position: relative;
     display: block;
-    width: 5%;
+    width: 50%;
+}
+
+.leftPlayerImg {
+    position: absolute;
+    right: 20%;
+    display: block;
+    width: 30%;
+}
+
+.rightPlayerImg {
+    position: absolute;
+    left: 20%;
+    display: block;
+    width: 30%;
+}
+
+.orIcon {
+    position: relative;
+    align-self: center;
+    height: 50%;
+    text-decoration: none;
+    background-color: var(--color-button);
+    color: var(--color-button-text);
+    border-radius: 10px;
+    font-size: 36px;
+    font-weight: 900;
+    padding: 17px 26px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 @media screen and (max-width: 830px) {
-    .scoreBoard h1 {
-        font-size: 10px;
-        font-weight: 900;
+    .mainContainer h1 {
+        font-size: 44px;
     }
-    .arrowImg{
+
+    .mainContainer p {
+        font-size: 20px;
+    }
+
+    .logoImg {
         display: block;
         width: 10%;
+    }
+
+    .homeImg {
+        width: 10%;
+    }
+
+    .scoreBoard h1 {
+        font-size: 15px;
+        font-weight: 900;
+    }
+
+    .body {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rightPlayerImg {
+        left: 50%;
+    }
+
+    .orIcon {
+        font-size: 20px;
+        padding: 7px 16px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .choice h1 {
+        font-size: 20px;
     }
 }
