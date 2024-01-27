@@ -4,7 +4,6 @@
     position: relative;
     flex-direction: column;
     text-align: center;
-    z-index: 2;
 }
 
 .mainContainer h1 {
@@ -17,7 +16,7 @@
     font-weight: 400;
 }
 
-.navbar {
+.nav {
     background-color: var(--color-borders);
     display: flex;
     flex-direction: row;
@@ -27,13 +26,11 @@
 }
 
 .logoImg {
-    display: block;
-    width: 5%;
+    width: 112px;
 }
 
 .homeImg {
-    display: block;
-    width: 5%;
+    width: 85px;
     margin-left: 10px;
 }
 
@@ -59,6 +56,7 @@
     position: relative;
     display: flex;
     flex-direction: row;
+    margin-top: 20px;
 }
 
 .choice {
@@ -68,9 +66,25 @@
     overflow: hidden;
     border-radius: 10px;
     border: 2px solid #197C82;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
     place-items: center;
+}
+
+.choice.correct {
+    background-color: rgba(0, 255, 55, 0.1) !important;
+    border: 2px solid green !important;
+}
+
+.choice.wrong {
+    background-color: rgba(255, 0, 0, 0.5) !important;
+    border: 2px solid red !important;
+}
+
+.choice:hover {
+    background-color: rgba(0, 0, 255, 0.1);
+    border: 2px solid blue;
 }
 
 .choice h1 {
@@ -81,28 +95,26 @@
 
 .teamLogoImg {
     position: relative;
-    display: block;
     width: 50%;
 }
 
 .leftPlayerImg {
     position: absolute;
     right: 20%;
-    display: block;
     width: 30%;
 }
 
 .rightPlayerImg {
     position: absolute;
     left: 20%;
-    display: block;
     width: 30%;
 }
 
 .orIcon {
-    position: relative;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     align-self: center;
-    height: 50%;
     text-decoration: none;
     background-color: var(--color-button);
     color: var(--color-button-text);
@@ -123,12 +135,11 @@
     }
 
     .logoImg {
-        display: block;
         width: 10%;
     }
 
     .homeImg {
-        width: 10%;
+        width: 50%;
     }
 
     .scoreBoard h1 {
@@ -146,10 +157,9 @@
     }
 
     .orIcon {
+        top: 50%;
         font-size: 20px;
         padding: 7px 16px;
-        margin-top: 5px;
-        margin-bottom: 5px;
     }
 
     .choice h1 {

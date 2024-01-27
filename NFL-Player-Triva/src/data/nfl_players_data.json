@@ -1,0 +1,38 @@
+{
+    "quarterbacks": {
+        "Tom Brady": { "name": "Tom Brady", "team": "Tampa Bay Buccaneers", "position": "Quarterback", "stats": { /* ... */ }},
+        "Patrick Mahomes": { "name": "Patrick Mahomes", "team": "Kansas City Chiefs", "position": "Quarterback", "stats": { /* ... */ }},
+        "Aaron Rodgers": { "name": "Aaron Rodgers", "team": "Green Bay Packers", "position": "Quarterback", "stats": { /* ... */ }},
+        "Russell Wilson": { "name": "Russell Wilson", "team": "Seattle Seahawks", "position": "Quarterback", "stats": { /* ... */ }},
+        "Josh Allen": { "name": "Josh Allen", "team": "Buffalo Bills", "position": "Quarterback", "stats": { /* ... */ }},
+        "Dak Prescott": { "name": "Dak Prescott", "team": "Dallas Cowboys", "position": "Quarterback", "stats": { /* ... */ }},
+        "Justin Herbert": { "name": "Justin Herbert", "team": "Los Angeles Chargers", "position": "Quarterback", "stats": { /* ... */ }},
+        "Kyler Murray": { "name": "Kyler Murray", "team": "Arizona Cardinals", "position": "Quarterback", "stats": { /* ... */ }},
+        "Lamar Jackson": { "name": "Lamar Jackson", "team": "Baltimore Ravens", "position": "Quarterback", "stats": { /* ... */ }},
+        "Matthew Stafford": { "name": "Matthew Stafford", "team": "Los Angeles Rams", "position": "Quarterback", "stats": { /* ... */ }}
+    },
+    "wideReceivers": {
+        "DeAndre Hopkins": { "name": "DeAndre Hopkins", "team": "Arizona Cardinals", "position": "Wide Receiver", "stats": { /* ... */ }},
+        "Tyreek Hill": { "name": "Tyreek Hill", "team": "Kansas City Chiefs", "position": "Wide Receiver", "stats": { /* ... */ }},
+        "Stefon Diggs": { "name": "Stefon Diggs", "team": "Buffalo Bills", "position": "Wide Receiver", "stats": { /* ... */ }},
+        "Davante Adams": { "name": "Davante Adams", "team": "Green Bay Packers", "position": "Wide Receiver", "stats": { /* ... */ }},
+        "Julio Jones": { "name": "Julio Jones", "team": "Tennessee Titans", "position": "Wide Receiver", "stats": { /* ... */ }},
+        "Michael Thomas": { "name": "Michael Thomas", "team": "New Orleans Saints", "position": "Wide Receiver", "stats": { /* ... */ }},
+        "Keenan Allen": { "name": "Keenan Allen", "team": "Los Angeles Chargers", "position": "Wide Receiver", "stats": { /* ... */ }},
+        "Allen Robinson": { "name": "Allen Robinson", "team": "Chicago Bears", "position": "Wide Receiver", "stats": { /* ... */ }},
+        "Calvin Ridley": { "name": "Calvin Ridley", "team": "Atlanta Falcons", "position": "Wide Receiver", "stats": { /* ... */ }},
+        "Amari Cooper": { "name": "Amari Cooper", "team": "Dallas Cowboys", "position": "Wide Receiver", "stats": { /* ... */ }}
+    },
+    "runningBacks": {
+        "Derrick Henry": { "name": "Derrick Henry", "team": "Tennessee Titans", "position": "Running back", "stats": { /* ... */ }},
+        "Alvin Kamara": { "name": "Alvin Kamara", "team": "New Orleans Saints", "position": "Running back", "stats": { /* ... */ }},
+        "Christian McCaffrey": { "name": "Christian McCaffrey", "team": "Carolina Panthers", "position": "Running back", "stats": { /* ... */ }},
+        "Saquon Barkley": { "name": "Saquon Barkley", "team": "New York Giants", "position": "Running back", "stats": { /* ... */ }},
+        "Ezekiel Elliott": { "name": "Ezekiel Elliott", "team": "Dallas Cowboys", "position": "Running back", "stats": { /* ... */ }},
+        "Nick Chubb": { "name": "Nick Chubb", "team": "Cleveland Browns", "position": "Running back", "stats": { /* ... */ }},
+        "Jonathan Taylor": { "name": "Jonathan Taylor", "team": "Indianapolis Colts", "position": "Running back", "stats": { /* ... */ }},
+        "Joe Mixon": { "name": "Joe Mixon", "team": "Cincinnati Bengals", "position": "Running back", "stats": { /* ... */ }},
+        "Aaron Jones": { "name": "Aaron Jones", "team": "Green Bay Packers", "position": "Running back", "stats": { /* ... */ }},
+        "Antonio Gibson": { "name": "Antonio Gibson", "team": "Washington Football Team", "position": "Running back", "stats": { /* ... */ }}
+    }
+}
