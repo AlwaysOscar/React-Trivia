@@ -1,33 +1,49 @@
 import React, { useState, useEffect } from 'react';
 import styles from './GamePage.module.css';
-import { getImageUrl } from '../../utils';
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { getImageUrl, getTeamLogoImage, getPlayerImage } from '../../utils';
+import { Link, useNavigate } from "react-router-dom";
 
 const questionsData = [
     {
         id: 1,
-        question: "Which of the following has more passing yards?",
+        question: 'Which of the following has more passing yards?',
         options: [
-            { id: 1, text: "Jimmy Garoppolo", isCorrect: false, teamLogo: getImageUrl('game/raiders_logo.png'), playerImage: getImageUrl('game/Jimmy_Garoppolo.png') },
-            { id: 2, text: "Matthew Stafford", isCorrect: true, teamLogo: getImageUrl('game/rams_logo.png'), playerImage: getImageUrl('game/Matthew_Stafford.png') },
-        ],
+            { id: 1, name: "Tua Tagovailoa", team: "dolphins", position: "Quarterback", pass_yrds: 4624, isCorrect: true },
+            { id: 2, name: "Jared Goff", team: "lions", position: "Quarterback", pass_yrds: 4575, isCorrect: false }
+        ]
     },
     {
         id: 2,
-        question: "Which of the following has more receiving yards?",
+        question: 'Which of the following has more passing yards?',
         options: [
-            { id: 3, text: "Tyreek Hill", isCorrect: false, teamLogo: getImageUrl('game/dolphins_logo.png'), playerImage: getImageUrl('game/Tyreek_Hill.png') },
-            { id: 4, text: "CeeDee Lamb", isCorrect: true, teamLogo: getImageUrl('game/cowboys_logo.png'), playerImage: getImageUrl('game/CeeDee_Lamb.png') },
-        ],
+            { id: 1, name: "Josh Allen", team: "bills", position: "Quarterback", pass_yrds: 4306, isCorrect: true },
+            { id: 2, name: "Derek Carr", team: "saints", position: "Quarterback", pass_yrds: 3878, isCorrect: false }
+        ]
     },
     {
         id: 3,
-        question: "Which of the following has more force fumbles?",
+        question: 'Which of the following has more passing yards?',
         options: [
-            { id: 4, text: "Myles Garrett", isCorrect: true, teamLogo: getImageUrl('game/browns_logo.png'), playerImage: getImageUrl('game/Myles_Garrett.png') },
-            { id: 5, text: "Alohi Gilman", isCorrect: false, teamLogo: getImageUrl('game/chargers_logo.png'), playerImage: getImageUrl('game/Alohi_Gilman.png') },
-        ],
+            { id: 1, name: "Jimmy Garoppolo", team: "raiders", position: "Quarterback", pass_yrds: 1205, isCorrect: false },
+            { id: 2, name: "Lamar Jackson", team: "ravens", position: "Quarterback", pass_yrds: 3678, isCorrect: true }
+        ]
     },
+    {
+        id: 4,
+        question: 'Which of the following has more passing yards?',
+        options: [
+            { id: 1, name: "CJ Stroud", team: "texans", position: "Quarterback", pass_yrds: 4108, isCorrect: true },
+            { id: 2, name: "Jalen Hurts", team: "eagles", position: "Quarterback", pass_yrds: 3858, isCorrect: false }
+        ]
+    },
+    {
+        id: 5,
+        question: 'Which of the following has more passing yards?',
+        options: [
+            { id: 1, name: "Russell Wilson", team: "broncos", position: "Quarterback", pass_yrds: 3070, isCorrect: false },
+            { id: 2, name: "Matthew Stafford", team: "rams", position: "Quarterback", pass_yrds: 3965, isCorrect: true }
+        ]
+    }
 ];
 
 export const GamePage = () => {
@@ -36,8 +52,6 @@ export const GamePage = () => {
     const [showResult, setShowResult] = useState(false);
     const [selectedOption, setSelectedOption] = useState(null);
     const navigate = useNavigate();
-    const location = useLocation();
-    const selectedCategory = location.state ? location.state.selectedCategory : null;
 
     useEffect(() => {
         // Reset state when moving to a new question
@@ -72,16 +86,18 @@ export const GamePage = () => {
         // Math.random give a number between 0 and 1 including decimals
         // * questionsData.length gives you a value between 0 and n
         // Math.floor is used to drop the decimal values
-        return options.sort(() => Math.floor(Math.random() * questionsData.length));
+        // return options.sort(() => Math.floor(Math.random() * questionsData.length));
+
+        return options;
     };
 
     const currentQuestion = questionsData[currentQuestionIndex];
 
     return (
         <section className={styles.mainContainer}>
-            <nav id="navbar" className={styles.nav }>
+            <nav id="navbar" className={styles.nav}>
                 <Link to="/">
-                    <img src={getImageUrl('game/home_icon.png')} alt="Home Icon" className={styles.homeImg}/>
+                    <img src={getImageUrl('game/home_icon.png')} alt="Home Icon" className={styles.homeImg} />
                 </Link>
 
                 <img src={getImageUrl('game/nfl_logo.png')} alt="NFL Logo" className={styles.logoImg} />
@@ -103,16 +119,16 @@ export const GamePage = () => {
                         } onClick={() => handleOptionClick(option)}
                     >
                         <img
-                            src={option.teamLogo}
+                            src={getTeamLogoImage(option.team)}
                             alt="Team Logo Image"
                             className={styles.teamLogoImg}
                         />
                         <img
-                            src={option.playerImage}
+                            src={getPlayerImage(option.name)}
                             alt="Player Image"
                             className={option.id % 2 ? styles.leftPlayerImg : styles.rightPlayerImg}
                         />
-                        <h1>{option.text}</h1>
+                        <h1>{option.name}</h1>
                     </div>
                 ))}
                 <div className={styles.orIcon}> OR </div>

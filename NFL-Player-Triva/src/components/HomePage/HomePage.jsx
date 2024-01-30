@@ -31,7 +31,7 @@ export const HomePage = () => {
                 className={styles.categoryDropdown}
             >
                 <option value="" disabled>Select category</option>
-                <option value="mixed">Mixed</option>
+                <option value="quarterbacks">Quarterbacks</option>
             </select>
 
             <Link
