@@ -2,9 +2,9 @@
 
 ## Screenshots
 
-- Home Page: ![Home Page](homeScreenshot.png)
-- Game Page: ![Game Page](gameScreenshot.png)
-- End Page: ![End Page](endScreenshot.png)
+Home Page ![Home Page](homeScreenshot.png)
+Game Page ![Game Page](gameScreenshot.png)
+End Page ![End Page](endScreenshot.png)
 
 This project is a trivia game where players can test their knowledge about NFL players. It utilizes React for the frontend and React Router for navigation.
 
