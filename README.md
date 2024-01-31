@@ -1,7 +1,5 @@
 # NFL Player Trivia Game (Work In Progress)
 
-## Screenshots
-
 Home Page ![Home Page](homeScreenshot.png)
 Game Page ![Game Page](gameScreenshot.png)
 End Page ![End Page](endScreenshot.png)
@@ -38,10 +36,6 @@ Once the development server is running, open your browser and navigate to `http:
 - Multiple-choice questions about NFL players' statistics.
 - Navigation between different pages using React Router.
 - Responsive design for various screen sizes.
-
-## Contributing
-
-Contributions are welcome! If you find any bugs or have suggestions for improvement, please open an issue or submit a pull request.
 
 ## License
 
